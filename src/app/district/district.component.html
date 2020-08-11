@@ -1,0 +1,30 @@
+<table>
+    <tr>
+        <th (click)="sortingWithService('name')">
+            District Name
+        </th>
+        <th (click)="sortingWithService('active')">
+            No of active cases
+        </th>
+        <th (click)="sortingWithService('confirmed')">
+            No of Confirmed cases
+        </th>
+        <th (click)="sortingWithService('deceased')">
+            No of Deceased cases
+        </th>
+    </tr>
+    <tr *ngFor="let district of a;let indexOfelement=index;">
+            <td [ngClass]="(indexOfelement===districtData.length-1)?'heading':'mytest'">
+                {{district.name}}
+            </td>
+            <td [ngClass]="(indexOfelement===districtData.length-1)?'heading':'mytest'">
+                {{district.active}}
+            </td>
+            <td [ngClass]="(indexOfelement===districtData.length-1)?'heading':'mytest'">
+                {{district.confirmed}}
+            </td>
+            <td [ngClass]="(indexOfelement===districtData.length-1)?'heading':'mytest'">
+                {{district.deceased}}
+            </td>
+    </tr>
+</table>

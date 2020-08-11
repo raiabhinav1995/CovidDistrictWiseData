@@ -1,0 +1,10 @@
+<h1>{{stateName}}</h1>
+<district (sendData)="getData($event)" [districtData]="covidData"></district>
+<table>
+    <tr>
+        <td>{{total.name}}</td>
+        <td>{{total.active}}</td>
+        <td>{{total.confirmed}}</td>
+        <td>{{total.deceased}}</td>
+    </tr>
+</table>

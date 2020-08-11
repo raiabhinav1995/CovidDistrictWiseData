@@ -1,0 +1,4 @@
+<div *ngFor="let covid of covidData$ | async | keyvalue">
+<state [stateName]="covid.key" [covidData]="covid.value"></state>
+ <!-- <piechart [pieData]="covid.value"></piechart> -->
+</div>
